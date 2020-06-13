@@ -1,0 +1,80 @@
+/* music */
+.bgm-btn-wraper {
+	position: fixed;
+    z-index: 200;
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 20px;
+}
+.bgm-btn-wraper .bgm-btn {
+	width: 100%;
+	height: 100%;
+    border-radius: 15px;
+    background-image: url(//as.eqh5.com/h5_view_2/images/bgmBtn-fbd2dc.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bgm-btn-wraper .bgm-btn.rotate {
+	animation: rotating 1.2s linear infinite;
+}
+@keyframes rotating {
+	0% {
+	    transform: rotate(0deg);
+	}
+	100% {
+	    transform: rotate(1turn);
+	}
+}
+/* first page */
+.first-page .photo-frame-left {
+	width: 12.2666666667vw;
+	height: 52.5333333vw;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.first-page .photo-frame-right {
+	width: 19.7333333vw;
+	height: 38.66666667vw;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.first-page .bottom-ear {
+	width: 82.9333333vw;
+	height: 27.2vw;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.first-page .logo {
+	display: block;
+	width: 27.2vw;
+	height: 16vw;
+	margin: 32px auto 0;
+}
+.first-page .title {
+	font-size: 19px;
+	color: #744d23;
+	font-weight: 500;
+	margin: 18px auto 0;
+	text-align: center;
+}
+.first-page .rect-box {
+	width: 48.8vw;
+	height: 87.7333333vw;
+	background-image: url("/assets/rect.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 32px auto 0;
+	position: relative;
+}
+.first-page .rect-box .china-merchants {
+	width: 7px;
+	height: 91px;
+	position: absolute;
+	top: 50%;
+	right: -2px;
+	transform: translate3d(0,-60%,0);
+}
