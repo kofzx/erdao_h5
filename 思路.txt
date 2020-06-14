@@ -1,0 +1,11 @@
+1. rect块放大
+2. rect中的文字穿插进来
+3. 斜杆穿插进来
+4. “精致采耳”slideDown
+同时：
+5. logo slideDown
+6. title轻微slideUp
+7. 底部耳朵进场
+
+8. 角框入场并具备透明过渡效果
+9. 小球漂浮动画
