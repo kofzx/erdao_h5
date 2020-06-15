@@ -1,3 +1,9 @@
 .fp-section {
 	overflow: hidden;
 }
+.hidden {
+	visibility: hidden;
+}
+.visible {
+	visibility: visible;
+}

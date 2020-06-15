@@ -11,7 +11,7 @@
 	width: 100%;
 	height: 100%;
     border-radius: 15px;
-    background-image: url(//as.eqh5.com/h5_view_2/images/bgmBtn-fbd2dc.svg);
+    background-image: url('/assets/music.svg');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -52,29 +52,70 @@
 	display: block;
 	width: 27.2vw;
 	height: 16vw;
-	margin: 32px auto 0;
+	margin: 50px auto 0;
 }
 .first-page .title {
 	font-size: 19px;
 	color: #744d23;
 	font-weight: 500;
-	margin: 18px auto 0;
+	margin: 29px auto 0;
 	text-align: center;
 }
 .first-page .rect-box {
 	width: 48.8vw;
 	height: 87.7333333vw;
+	margin: 42px auto 0;
+	position: relative;
+}
+.first-page .rect-box .rect-box-bg {
+	width: 100%;
+	height: 100%;
 	background-image: url("/assets/rect.png");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	margin: 32px auto 0;
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
-.first-page .rect-box .china-merchants {
+.first-page .rect-box .rect-box-bg .china-merchants {
 	width: 7px;
 	height: 91px;
 	position: absolute;
 	top: 50%;
 	right: -2px;
 	transform: translate3d(0,-60%,0);
+}
+.first-page .rect-box .title-1 {
+	width: 11.2vw;
+	height: 44.8vw;
+	position: absolute;
+	top: 31px;
+	left: 39px;
+}
+.first-page .rect-box .title-2 {
+	width: 12vw;
+	height: 72.266666667vw;
+	position: absolute;
+	top: 31px;
+	right: 35px;
+}
+.first-page .rect-box .double-slash {
+	width: 55px;
+	height: 100px;
+	position: absolute;
+	opacity: 0;
+}
+.first-page .rect-box .double-slash.-left {
+	left: -34px;
+	top: 105px;
+}
+.first-page .rect-box .double-slash.-right {
+	right: -28px;
+	bottom: 30px;
+}
+.first-page .rect-box .refinement-text {
+	width: 15px;
+	height: 95px;
+	position: absolute;
+	left: -28px;
 }

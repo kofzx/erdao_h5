@@ -5,17 +5,60 @@ $(document).ready(function() {
 		scrollHorizontally: true,
 		verticalCentered: false,
 		afterLoad: function(origin, destination, direction) {
-			$(origin.item).find(".some-text").addClass("some-text-anim");
+			console.log("afterLoad--->");
+			console.log(origin, destination);
+
+			var $originItem = $(origin.item);
+			
+			if (origin.index === destination.index) {
+				$originItem.find(".-anim").each(function(_, item) {
+					addClass($(item));
+				});
+			} else {
+				// 滚动完全后才移除当前页的动画
+				$originItem.find(".-anim").each(function(_, item) {
+					removeClass($(item));
+				});
+			}
 		},
 		onLeave: function(origin, destination, direction) {
-			$(origin.item).find(".some-text").removeClass("some-text-anim");
+			console.log("onLeave--->");
+			console.log(origin, destination);
+
+			var $destinationItem = $(destination.item);
+			
+			// 在滚动完全前就执行动画
+			$destinationItem.find(".-anim").each(function(_, item) {
+				// 添加延迟，防止动画播放过快
+				setTimeout(function() {
+					addClass($(item));
+				}, 200);
+			});
 		},
 	});
+
+	function addClass($target) {
+		var animation = $target.data("animation"),
+			animationDelay = $target.data("animation-delay");
+
+		if (animationDelay) {
+			setTimeout(function() {
+				$target.removeClass("hidden").addClass(animation + " visible");
+			}, animationDelay);
+		} else {
+			$target.removeClass("hidden").addClass(animation + " visible");
+		}
+	}
+
+	function removeClass($target) {
+		$target.removeClass($target.data("animation")  + " visible").addClass("hidden");
+	}
 
 	var audio = document.getElementById("audio");
 	var audioController = document.querySelector(".bgm-btn");
 
 	// 自定义浏览器标签切换事件
+	// 用于实现切换浏览器标签，控制音乐的开关
 	// 参数有两个，分别为onShow, onHide回调
 	window.onTabChange(
 		function() {

@@ -3,8 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
-	<title></title>
+	<title>耳道招商</title>
 	<link rel="stylesheet" href="css/fullpage.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/index.css">
 </head>
@@ -12,19 +13,77 @@
 	<div id="fullpage">
 		<div class="section first-page">
 			<!-- bg sets -->
-			<img class="photo-frame-left" src="assets/photo-frame-left.png" alt="">
-			<img class="photo-frame-right" src="assets/photo-frame-right.png" alt="">
-			<img class="bottom-ear" src="assets/bottom-ear.png" alt="">
+			<img 
+				class="photo-frame-left -anim" 
+				data-animation="animate__animated animate__fadeInLeft" 
+				data-animation-delay="300"
+				src="assets/photo-frame-left.png" 
+				alt="">
+			<img 
+				class="photo-frame-right -anim" 
+				data-animation="animate__animated animate__fadeInRight" 
+				data-animation-delay="300"
+				src="assets/photo-frame-right.png" 
+				alt="">
+			<img 
+				class="bottom-ear -anim" 
+				data-animation="animate__animated animate__fadeInUp" 
+				data-animation-delay="300"
+				src="assets/bottom-ear.png" 
+				alt="">
 			<!-- main box -->
-			<img class="logo" src="assets/logo.png" alt="">
-			<h2 class="title">全球领先的专业采耳服务商</h2>
+			<img 
+				class="logo -anim" 
+				data-animation="animate__animated animate__fadeInDown" 
+				data-animation-delay="300"
+				src="assets/logo.png" 
+				alt="">
+			<h2 
+				class="title -anim"
+				data-animation="animate__animated animate__fadeInUp" 
+				data-animation-delay="300">
+				全球领先的专业采耳服务商
+			</h2>
 			<div class="rect-box">
-				<img class="china-merchants" src="assets/en-text.png" />
+				<div 
+					class="rect-box-bg -anim"
+					data-animation="animate__animated animate__zoomIn"
+					data-animation-delay="0">
+					<img class="china-merchants -anim" src="assets/en-text.png" />
+				</div>
+				<!-- titles -->
+				<img 
+					class="title-1 -anim animate__fast" 
+					data-animation="animate__animated animate__fadeInDown"
+					data-animation-delay="200"
+					src="assets/title-1.png" />
+				<img 
+					class="title-2 -anim animate__fast" 
+					data-animation="animate__animated animate__fadeInUp"
+					data-animation-delay="200"
+					src="assets/title-2.png" />
+				<!-- slashes -->
+				<img 
+					class="double-slash -left -anim animate__fast"
+					data-animation="animate__animated animate__fadeInLeft"
+					data-animation-delay="400"
+					src="assets/double-slash.png" />
+				<img 
+					class="double-slash -right -anim animate__fast"
+					data-animation="animate__animated animate__fadeInRight"
+					data-animation-delay="400" 
+					src="assets/double-slash.png" />
+				<!-- refinement text -->
+				<img 
+					class="refinement-text -anim" 
+					data-animation="animate__animated animate__fadeInDown"
+					data-animation-delay="300"
+					src="assets/refinement-text.png" />
 			</div>
 		</div>
-		<div class="section">Some section</div>
-		<div class="section">Some section</div>
-		<div class="section">Some section</div>
+		<div class="section second-page">Some section</div>
+		<div class="section third-page">Some section</div>
+		<div class="section fourth-page">Some section</div>
 	</div>
 	<div class="bgm-btn-wraper">
 		<div class="bgm-btn rotate" style="animation-play-state: paused;">
