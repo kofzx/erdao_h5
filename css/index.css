@@ -66,6 +66,7 @@
 	height: 87.7333333vw;
 	margin: 42px auto 0;
 	position: relative;
+	z-index: 1;
 }
 .first-page .rect-box .rect-box-bg {
 	width: 100%;
@@ -118,4 +119,36 @@
 	height: 95px;
 	position: absolute;
 	left: -28px;
+}
+.first-page .rect-box .bubble-1 {
+	width: 57px;
+	height: 57px;
+	background: #F6EBDE;
+	border-radius: 50%;
+	opacity: 0;
+	z-index: -1;
+	position: absolute;
+	left: -73px;
+	bottom: 89px;
+	animation: float 2s ease-in-out alternate infinite;
+}
+.first-page .rect-box .bubble-2 {
+	width: 85px;
+	height: 85px;
+	background: #FBF5EE;
+	border-radius: 50%;
+	opacity: 0;
+	z-index: -1;
+	position: absolute;
+	right: -52px;
+	top: -14px;
+	animation: float 2s ease-in-out alternate-reverse infinite;
+}
+@keyframes float {
+	0% {
+	    transform: translate3d(0px,-8px,0px);
+	}
+	100% {
+	    transform: translate3d(0px,8px,0px);
+	}
 }

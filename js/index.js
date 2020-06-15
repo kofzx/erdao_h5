@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	var animCls = ".-anim";
+
 	new fullpage('#fullpage', {
 		autoScrolling:true,
 		scrollHorizontally: true,
@@ -11,14 +13,24 @@ $(document).ready(function() {
 			var $originItem = $(origin.item);
 			
 			if (origin.index === destination.index) {
-				$originItem.find(".-anim").each(function(_, item) {
+				$originItem.find(animCls).each(function(_, item) {
 					addClass($(item));
 				});
+				// 自定义动画
+				if (origin.index === 0) {
+					setTimeout(function() {
+						$originItem.find(".bubble").animate({ opacity: 1 }, 1000);
+					}, 400);
+				}
 			} else {
 				// 滚动完全后才移除当前页的动画
-				$originItem.find(".-anim").each(function(_, item) {
+				$originItem.find(animCls).each(function(_, item) {
 					removeClass($(item));
 				});
+				// 自定义动画
+				if (origin.index === 0) {
+					$originItem.find(".bubble").animate({ opacity: 0 }, 0);
+				}
 			}
 		},
 		onLeave: function(origin, destination, direction) {
@@ -28,12 +40,18 @@ $(document).ready(function() {
 			var $destinationItem = $(destination.item);
 			
 			// 在滚动完全前就执行动画
-			$destinationItem.find(".-anim").each(function(_, item) {
+			$destinationItem.find(animCls).each(function(_, item) {
 				// 添加延迟，防止动画播放过快
 				setTimeout(function() {
 					addClass($(item));
 				}, 200);
 			});
+			// 自定义动画
+			if (destination.index === 0) {
+				setTimeout(function() {
+					$destinationItem.find(".bubble").animate({ opacity: 1 }, 1000);
+				}, 400);
+			}
 		},
 	});
 
