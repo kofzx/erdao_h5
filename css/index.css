@@ -55,7 +55,7 @@
 	margin: 50px auto 0;
 }
 .first-page .title {
-	font-size: 19px;
+	font-size: 20px;
 	color: #744d23;
 	font-weight: 500;
 	margin: 29px auto 0;
@@ -79,8 +79,8 @@
 	left: 0;
 }
 .first-page .rect-box .rect-box-bg .china-merchants {
-	width: 7px;
-	height: 91px;
+	width: 1.86666667vw;
+	height: 24.26666667vw;
 	position: absolute;
 	top: 50%;
 	right: -2px;
@@ -101,8 +101,8 @@
 	right: 35px;
 }
 .first-page .rect-box .double-slash {
-	width: 55px;
-	height: 100px;
+	width: 14.66666667vw;
+	height: 26.66666667vw;
 	position: absolute;
 	opacity: 0;
 }
@@ -115,33 +115,31 @@
 	bottom: 30px;
 }
 .first-page .rect-box .refinement-text {
-	width: 15px;
-	height: 95px;
+	width: 4vw;
+	height: 25.33333333vw;
 	position: absolute;
 	left: -28px;
 }
-.first-page .rect-box .bubble-1 {
-	width: 57px;
-	height: 57px;
-	background: #F6EBDE;
+.first-page .rect-box .bubble {
 	border-radius: 50%;
 	opacity: 0;
 	z-index: -1;
 	position: absolute;
-	left: -73px;
-	bottom: 89px;
+}
+.first-page .rect-box .bubble-1 {
+	width: 15.2vw;
+	height: 15.2vw;
+	background: #F6EBDE;
+	left: -19.46666667vw;
+	bottom: 23.73333333vw;
 	animation: float 2s ease-in-out alternate infinite;
 }
 .first-page .rect-box .bubble-2 {
-	width: 85px;
-	height: 85px;
+	width: 22.66666667vw;
+	height: 22.66666667vw;
 	background: #FBF5EE;
-	border-radius: 50%;
-	opacity: 0;
-	z-index: -1;
-	position: absolute;
-	right: -52px;
-	top: -14px;
+	right: -13.866666667vw;
+	top: -3.733333333vw;
 	animation: float 2s ease-in-out alternate-reverse infinite;
 }
 @keyframes float {
