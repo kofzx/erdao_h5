@@ -36,6 +36,18 @@ html {
 	}
 }
 /* common */
+.fit-container {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+@media (min-width: 375px) and (min-height: 812px) {
+	.fit-container {
+		width: 375px;
+		height: 667px;
+	}
+}
 .bg-box {
 	width: 100%;
 	height: 100%;
@@ -261,7 +273,7 @@ html {
 }
 .second-page .main-wrapper .timeline-box {
 	width: 15px;
-	height: 83.9580209895vh;
+	height: 35em;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -455,4 +467,67 @@ html {
 	color: #333333;
 	line-height: 1.3;
 	opacity: 0;
+}
+/* fourth page */
+.fourth-page .product-background {
+	background-image: url("/assets/pro-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	animation: bgScroll 6s linear both alternate infinite;
+}
+@keyframes bgScroll {
+	0% {
+		background-position-x: 0px;
+	}
+	100% {
+		background-position-x: -4.25rem;
+	}
+}
+.fourth-page .product-box {
+	padding: 0 27px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 45px;
+}
+.fourth-page .product-box .product-item {
+	width: 40vw;
+	margin-bottom: 30px;
+}
+.fourth-page .product-box .product-item .product-title {
+	font-size: 16px;
+	font-weight: bold;
+	color: #101010;
+	text-align: center;
+	margin-top: 19px;
+}
+.fourth-page .product-box .product-item .product {
+	width: 40vw;
+	height: 40vw;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	z-index: 1;
+}
+.fourth-page .product-box .product-item .product::before {
+	width: 100%;
+	height: 100%;
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.3);
+}
+.fourth-page .product-box .product-item .product-1 {
+	background-image: url("/assets/pro1.png");
+}
+.fourth-page .product-box .product-item .product-2 {
+	background-image: url("/assets/pro2.png");
+}
+.fourth-page .product-box .product-item .product-3 {
+	background-image: url("/assets/pro3.png");
+}
+.fourth-page .product-box .product-item .product-4 {
+	background-image: url("/assets/pro4.png");
 }

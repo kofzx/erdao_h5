@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var animCls = ".-anim";
 
 	new fullpage('#fullpage', {
-		anchors: ['firstPage', 'secondPage', 'thirdPage'],
+		anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
 		css3: false,
 		autoScrolling:true,
 		scrollHorizontally: true,
