@@ -93,6 +93,24 @@ html {
 	bottom: 3.2vw;
 	right: -4vw;
 }
+.product-background {
+	background-image: url("/assets/pro-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	animation: bgScroll 6s linear both alternate infinite;
+	z-index: 1;
+	position: relative;
+}
+.product-background::before {
+	width: 100%;
+	height: 100%;
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
 /* custom animate */
 .animate__fadeBigInLeft {
 	animation-name: fadeBigInLeft;
@@ -119,6 +137,23 @@ html {
 		opacity: 0;
 		-webkit-transform: translate3d(500%, 0, 0);
 	    transform: translate3d(500%, 0, 0);
+	    visibility: visible;
+	}
+
+	to {
+		opacity: 1;
+	    -webkit-transform: translate3d(0, 0, 0);
+	    transform: translate3d(0, 0, 0);
+	}
+}
+.animate__fadeMiddleInRight {
+	animation-name: fadeMiddleInRight;
+}
+@keyframes fadeMiddleInRight {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(200px, 0, 0);
+	    transform: translate3d(200px, 0, 0);
 	    visibility: visible;
 	}
 
@@ -469,11 +504,8 @@ html {
 	opacity: 0;
 }
 /* fourth page */
-.fourth-page .product-background {
-	background-image: url("/assets/pro-bg.jpg");
-	background-repeat: no-repeat;
-	background-size: auto 100%;
-	animation: bgScroll 6s linear both alternate infinite;
+.fourth-page .product-background::before {
+	background: rgba(255,255,255,0.78);
 }
 @keyframes bgScroll {
 	0% {
@@ -530,4 +562,43 @@ html {
 }
 .fourth-page .product-box .product-item .product-4 {
 	background-image: url("/assets/pro4.png");
+}
+/* fifth page */
+.fifth-page .product-background::before {
+	background: rgba(255,255,255,0.88);
+}
+.fifth-page .data-box {
+	padding: 0 27px;
+	height: 84vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: space-between;
+	margin-top: 67px;
+}
+.fifth-page .data-box .data-item {
+	position: relative;
+}
+.fifth-page .data-box .data-item .item-top {
+	height: 46px;
+	position: relative;
+	left: -10px;
+	opacity: 0;
+}
+.fifth-page .data-box .data-item .item-top .icon {
+	transform: scale(0.5);
+}
+.fifth-page .data-box .data-item .item-top .title {
+	position: absolute;
+	left: 42px;
+    top: 30%;
+    font-size: 1.0625rem;
+    font-weight: bold;
+    color: #d2a369;
+}
+.fifth-page .data-box .data-item .item-bottom {
+	font-size: 1rem;
+	color: #000000;
+	line-height: 1.3;
+	opacity: 0;
 }
