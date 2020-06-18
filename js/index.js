@@ -59,19 +59,38 @@ $(document).ready(function() {
 
 	function addClass($target) {
 		var animation = $target.data("animation"),
-			animationDelay = $target.data("animation-delay");
+			animationDelay = $target.data("animation-delay"),
+			animationDuration = $target.data("animation-duration"),
+			animationComplete = $target.data("animation-complete");
 
 		if (animationDelay) {
 			setTimeout(function() {
-				$target.removeClass("hidden").addClass(animation + " visible");
+				_addClass($target);
+				_animateWithDuration();
 			}, animationDelay);
 		} else {
+			_addClass($target);
+			_animateWithDuration();
+		}
+
+		function _addClass() {
 			$target.removeClass("hidden").addClass(animation + " visible");
+		}
+
+		function _animateWithDuration() {
+			if (animationDuration) {
+				setTimeout(function() {
+					removeClass($target);
+					setTimeout(function() {
+						$target.removeClass("hidden").addClass(animation + " visible " + animationComplete);
+					}, 50);
+				}, animationDuration);
+			}
 		}
 	}
 
 	function removeClass($target) {
-		$target.removeClass($target.data("animation")  + " visible").addClass("hidden");
+		$target.removeClass($target.data("animation")  + " visible " + $target.data("animation-complete")).addClass("hidden");
 	}
 
 	var audio = document.getElementById("audio");
