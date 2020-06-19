@@ -1,0 +1,82 @@
+<svg 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	viewBox="0 0 286 383"
+	width="286" 
+	height="383">
+	<defs>
+	    <style>
+	    	.cls {
+				stroke-dasharray: 842.9029541015625, 842.9029541015625;
+				stroke-dashoffset: 842.9029541015625;
+				animation-duration: 1.5s;
+				animation-timing-function: ease-in-out;
+				animation-fill-mode: forwards;
+				animation-iteration-count: infinite;
+	    	}
+	    	.cls-1 {
+	    		animation-name: dash-to-1;
+			}
+	    	.cls-2 {
+	    		animation-name: dash-to-2;
+			}
+			.cls-3 {
+				animation-name: dash-to-3;
+			}
+			.cls-4 {
+				animation-name: dash-to-4;
+			}
+			.cls-5 {
+				animation-name: dash-to-5;
+			}
+			@keyframes dash-to-1 {
+				0%, 10% {
+					stroke-dashoffset: 842.9029541015625;
+				}
+				100% {
+					stroke-dashoffset: 0;
+				}
+			} 
+			@keyframes dash-to-2 {
+				0%, 10% {
+					stroke-dashoffset: 842.9029541015625;
+				}
+				100%, 80% {
+					stroke-dashoffset: 0;
+				}
+			} 
+			@keyframes dash-to-3 {
+				0%, 10% {
+					stroke-dashoffset: 842.9029541015625;
+				}
+				100%, 60% {
+					stroke-dashoffset: 0;
+				}
+			} 
+			@keyframes dash-to-4 {
+				0%, 10% {
+					stroke-dashoffset: 842.9029541015625;
+				}
+				100%, 40% {
+					stroke-dashoffset: 0;
+				}
+			} 
+			@keyframes dash-to-5 {
+				0%, 10% {
+					stroke-dashoffset: 842.9029541015625;
+				}
+				100%, 20% {
+					stroke-dashoffset: 0;
+				}
+			} 
+	    </style>
+	    <g id="edTmpl">
+			<path class="p" d="m6.937674,147.502177c0,0 -4.256242,-136.534489 137.731754,-141.060134c15.010234,0.004841 102.781484,2.924969 131.904375,107.97912c0.219516,2.370564 15.653014,55.613986 -35.904152,109.705489c-4.858168,6.112622 -28.510698,22.489461 -21.987768,68.855959c0.240436,3.407044 7.16574,65.514489 -60.103465,82.171988c-1.140153,0.740324 -76.390448,17.027661 -95.393041,-65.889652" stroke-linecap="round" fill="none"></path>
+		</g>
+  	</defs>
+	<use class="cls cls-1" x="0" y="0" xlink:href="#edTmpl" stroke="#d41768" stroke-width="6" transform="translate(0 0) scale(1)" />
+	<use class="cls cls-2" x="0" y="0" xlink:href="#edTmpl" stroke="#db4914" stroke-width="7.5" transform="translate(25 40) scale(0.8)" />
+	<use class="cls cls-3" x="0" y="0" xlink:href="#edTmpl" stroke="#e16a0e" stroke-width="10" transform="translate(50 80) scale(0.6)" />
+	<use class="cls cls-4" x="0" y="0" xlink:href="#edTmpl" stroke="#e99214" stroke-width="15.000000000000004" transform="translate(75 120) scale(0.4)" />
+	<use class="cls cls-5" x="0" y="0" xlink:href="#edTmpl" stroke="#efb918" stroke-width="30.000000000000007" transform="translate(100 160) scale(0.2)" />
+</svg>
