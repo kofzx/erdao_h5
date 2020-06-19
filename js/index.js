@@ -10,8 +10,7 @@ $(document).ready(function() {
 			'fourthPage', 
 			'fifthPage', 
 			'sixthPage',
-			'seventhPage',
-			'eighthPage'
+			'seventhPage'
 		],
 		css3: false,
 		autoScrolling:true,
@@ -144,4 +143,12 @@ $(document).ready(function() {
 		audioController.style.animationPlayState = "paused";
 	}
 	
+	// 表单验证相关
+	$("#submit").on("click", function() {
+		var cityVal = $("#city").val(),
+			nameVal = $("#name").val(),
+			phoneVal = $("#phone").val(),
+			emailVal = $("#email").val(),
+			descVal = $("#desc").val();
+	});
 });
