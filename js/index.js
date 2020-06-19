@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	var animCls = ".-anim";
+
 	// 资源加载器
 	var resources = [
 		'./assets/bottom-ear.png',
@@ -44,74 +46,75 @@ $(document).ready(function() {
 	       if ( flag === len ) {
 	          // 全部加载完成
 	          $("#loading").hide();
+	          initFullPage();
 	       }
 	    }
 	 }
 
-	var animCls = ".-anim";
+	function initFullPage() {
+		new fullpage('#fullpage', {
+			anchors: [
+				'firstPage', 
+				'secondPage', 
+				'thirdPage', 
+				'fourthPage', 
+				'fifthPage', 
+				'sixthPage',
+				'seventhPage'
+			],
+			css3: false,
+			autoScrolling:true,
+			scrollHorizontally: true,
+			verticalCentered: false,
+			afterLoad: function(origin, destination, direction) {
+				console.log("afterLoad--->");
+				console.log(origin, destination);
 
-	new fullpage('#fullpage', {
-		anchors: [
-			'firstPage', 
-			'secondPage', 
-			'thirdPage', 
-			'fourthPage', 
-			'fifthPage', 
-			'sixthPage',
-			'seventhPage'
-		],
-		css3: false,
-		autoScrolling:true,
-		scrollHorizontally: true,
-		verticalCentered: false,
-		afterLoad: function(origin, destination, direction) {
-			console.log("afterLoad--->");
-			console.log(origin, destination);
+				var $originItem = $(origin.item);
+				
+				if (origin.index === destination.index) {
+					$originItem.find(animCls).each(function(_, item) {
+						addClass($(item));
+					});
+					// 自定义动画
+					if (origin.index === 0) {
+						setTimeout(function() {
+							$originItem.find(".bubble").animate({ opacity: 1 }, 1000);
+						}, 400);
+					}
+				} else {
+					// 滚动完全后才移除当前页的动画
+					$originItem.find(animCls).each(function(_, item) {
+						removeClass($(item));
+					});
+					// 自定义动画
+					if (origin.index === 0) {
+						$originItem.find(".bubble").animate({ opacity: 0 }, 0);
+					}
+				}
+			},
+			onLeave: function(origin, destination, direction) {
+				console.log("onLeave--->");
+				console.log(origin, destination);
 
-			var $originItem = $(origin.item);
-			
-			if (origin.index === destination.index) {
-				$originItem.find(animCls).each(function(_, item) {
-					addClass($(item));
+				var $destinationItem = $(destination.item);
+				
+				// 在滚动完全前就执行动画
+				$destinationItem.find(animCls).each(function(_, item) {
+					// 添加延迟，防止动画播放过快
+					setTimeout(function() {
+						addClass($(item));
+					}, 200);
 				});
 				// 自定义动画
-				if (origin.index === 0) {
+				if (destination.index === 0) {
 					setTimeout(function() {
-						$originItem.find(".bubble").animate({ opacity: 1 }, 1000);
+						$destinationItem.find(".bubble").animate({ opacity: 1 }, 1000);
 					}, 400);
 				}
-			} else {
-				// 滚动完全后才移除当前页的动画
-				$originItem.find(animCls).each(function(_, item) {
-					removeClass($(item));
-				});
-				// 自定义动画
-				if (origin.index === 0) {
-					$originItem.find(".bubble").animate({ opacity: 0 }, 0);
-				}
-			}
-		},
-		onLeave: function(origin, destination, direction) {
-			console.log("onLeave--->");
-			console.log(origin, destination);
-
-			var $destinationItem = $(destination.item);
-			
-			// 在滚动完全前就执行动画
-			$destinationItem.find(animCls).each(function(_, item) {
-				// 添加延迟，防止动画播放过快
-				setTimeout(function() {
-					addClass($(item));
-				}, 200);
-			});
-			// 自定义动画
-			if (destination.index === 0) {
-				setTimeout(function() {
-					$destinationItem.find(".bubble").animate({ opacity: 1 }, 1000);
-				}, 400);
-			}
-		},
-	});
+			},
+		});
+	}
 
 	function addClass($target) {
 		var animation = $target.data("animation"),
