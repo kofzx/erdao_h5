@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var animCls = ".-anim";
 
 	var isLoaded = false;
+	var userWasPaused = false;
 	// 资源加载器
 	var resources = [
 		'./assets/bottom-ear.png',
@@ -69,8 +70,8 @@ $(document).ready(function() {
 			scrollHorizontally: true,
 			verticalCentered: false,
 			afterLoad: function(origin, destination, direction) {
-				console.log("afterLoad--->");
-				console.log(origin, destination);
+				// console.log("afterLoad--->");
+				// console.log(origin, destination);
 
 				var $originItem = $(origin.item);
 				
@@ -96,8 +97,11 @@ $(document).ready(function() {
 				}
 			},
 			onLeave: function(origin, destination, direction) {
-				console.log("onLeave--->");
-				console.log(origin, destination);
+				// console.log("onLeave--->");
+				// console.log(origin, destination);
+
+				// 播放音乐
+				(isLoaded && !userWasPaused) && playAudio();
 
 				var $destinationItem = $(destination.item);
 				
@@ -162,11 +166,7 @@ $(document).ready(function() {
 	// 参数有两个，分别为onShow, onHide回调
 	window.onTabChange(
 		function() {
-			audio.play()
-				.then(() => {
-					audioController.style.animationPlayState = "running";
-				})
-				.catch(() => {})
+			playAudio();
 		}, 
 		function() {
 			pauseAudio();
@@ -187,13 +187,17 @@ $(document).ready(function() {
 	})
 
 	function playAudio() {
-		audio.play();
-		audioController.style.animationPlayState = "running";
+		audio.play()
+			.then(() => {
+				audioController.style.animationPlayState = "running";
+			})
+			.catch(() => {});
 	}
 
 	function pauseAudio() {
 		audio.pause();
 		audioController.style.animationPlayState = "paused";
+		userWasPaused = true;
 	}
 	
 	// 表单验证相关
