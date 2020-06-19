@@ -47,9 +47,9 @@ $(document).ready(function() {
 	       flag++;
 	       if ( flag === len ) {
 	          // 全部加载完成
+	          isLoaded = true;
 	          $("#loading").hide();
 	          initFullPage();
-	          isLoaded = true;
 	       }
 	    }
 	 }
@@ -70,8 +70,8 @@ $(document).ready(function() {
 			scrollHorizontally: true,
 			verticalCentered: false,
 			afterLoad: function(origin, destination, direction) {
-				// console.log("afterLoad--->");
-				// console.log(origin, destination);
+				console.log("afterLoad--->");
+				console.log(origin, destination);
 
 				var $originItem = $(origin.item);
 				
@@ -81,6 +81,9 @@ $(document).ready(function() {
 					});
 					// 自定义动画
 					if (origin.index === 0) {
+						// 播放音乐
+						(isLoaded && !userWasPaused) && playAudio();
+
 						setTimeout(function() {
 							$originItem.find(".bubble").animate({ opacity: 1 }, 1000);
 						}, 400);
@@ -97,8 +100,8 @@ $(document).ready(function() {
 				}
 			},
 			onLeave: function(origin, destination, direction) {
-				// console.log("onLeave--->");
-				// console.log(origin, destination);
+				console.log("onLeave--->");
+				console.log(origin, destination);
 
 				// 播放音乐
 				(isLoaded && !userWasPaused) && playAudio();
