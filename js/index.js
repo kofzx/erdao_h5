@@ -182,15 +182,13 @@ $(document).ready(function() {
 				pauseAudio();
 			}
 		} else {
-			playAudio();
+			isLoaded && playAudio();
 		}
 	})
 
 	function playAudio() {
-		if (isLoaded) {
-			audio.play();
-			audioController.style.animationPlayState = "running";
-		}
+		audio.play();
+		audioController.style.animationPlayState = "running";
 	}
 
 	function pauseAudio() {

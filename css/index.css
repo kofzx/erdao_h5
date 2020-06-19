@@ -198,6 +198,7 @@ html {
     padding: 0 8px;
     margin-top: 9px;
     letter-spacing: 1px;
+    opacity: 0;
 }
 /* custom animate */
 .animate__fadeBigInLeft {
@@ -505,6 +506,7 @@ html {
 }
 .third-page .map-box .map-box-bg {
 	background-image: url("../assets/map.png");
+	opacity: 0;
 }
 .third-page .map-box .callout {
 	width: 5.86666666667vw;
