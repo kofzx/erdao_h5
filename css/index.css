@@ -93,15 +93,14 @@ html {
 	bottom: 3.2vw;
 	right: -4vw;
 }
-.product-background {
-	background-image: url("/assets/pro-bg.jpg");
+.background {
 	background-repeat: no-repeat;
 	background-size: auto 100%;
 	animation: bgScroll 6s linear both alternate infinite;
 	z-index: 1;
 	position: relative;
 }
-.product-background::before {
+.background::before {
 	width: 100%;
 	height: 100%;
 	display: block;
@@ -110,6 +109,80 @@ html {
 	top: 0;
 	left: 0;
 	z-index: -1;
+}
+.element-box {
+	width: 100%;
+    height: 46px;
+    color: #d2a369;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-radius: 0px;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+    transform: none;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 0px;
+    z-index: 11;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.element-box .element-box-contents {
+	width: 100%; 
+	height: 100%;
+	display: inline-flex;
+	align-items: center;
+}
+.element-box .element {
+	min-width: 1px;
+    min-height: 1px;
+    color: inherit;
+    outline: none;
+    vertical-align: middle;
+}
+.element-box input,
+.element-box textarea {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	resize: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    line-height: 1;
+    display: inline-block!important;
+}
+.element-box input::placeholder,
+.element-box textarea::placeholder {
+  	color: #d2a369;
+  	font-size: 17px;
+  	font-weight: 400;
+}
+.element-box .comp_input {
+	background: transparent;
+    border: none;
+    padding: 8px 15px!important;
+    font-weight: 400;
+    font-size: 17px;
+    height: 36px;
+}
+.comp_button {
+	width: 100%;
+	height: 44px;
+	white-space: nowrap;
+    border: 0;
+    background: #d2a369;
+    font-size: 16px;
+    color: white;
+    padding: 0 8px;
+    margin-top: 9px;
+    letter-spacing: 1px;
 }
 /* custom animate */
 .animate__fadeBigInLeft {
@@ -517,7 +590,10 @@ html {
 	opacity: 0;
 }
 /* fourth page */
-.fourth-page .product-background::before {
+.fourth-page .background {
+	background-image: url("/assets/pro-bg.jpg");
+}
+.fourth-page .background::before {
 	background: rgba(255,255,255,0.78);
 }
 @keyframes bgScroll {
@@ -526,6 +602,14 @@ html {
 	}
 	100% {
 		background-position-x: -4.25rem;
+	}
+}
+@keyframes bgScroll2 {
+	0% {
+		background-position-x: 0px;
+	}
+	100% {
+		background-position-x: -7.25rem;
 	}
 }
 .fourth-page .product-box {
@@ -579,7 +663,10 @@ html {
 	background-image: url("/assets/pro4.png");
 }
 /* fifth page */
-.fifth-page .product-background::before {
+.fifth-page .background {
+	background-image: url("/assets/pro-bg.jpg");
+}
+.fifth-page .background::before {
 	background: rgba(255,255,255,0.88);
 }
 .fifth-page .data-box {
@@ -615,5 +702,27 @@ html {
 	font-size: 1rem;
 	color: #000000;
 	line-height: 1.3;
+	opacity: 0;
+}
+/* eighth page */
+.eighth-page .background {
+	background-image: url("/assets/submit-bg.jpg");
+	animation: bgScroll2 6s linear both alternate infinite;
+}
+.eighth-page .title {
+	text-align: center;
+	font-size: 16px;
+	font-weight: 500;
+	color: #101010;
+	padding-top: 10px;
+	opacity: 0;
+}
+.eighth-page .form-box {
+	padding: 0 38px;
+	margin-top: 25px;
+	overflow: hidden;
+}
+.eighth-page .form-box .element-box {
+	margin-bottom: 16px;
 	opacity: 0;
 }
