@@ -292,6 +292,7 @@ html {
 	position: absolute;
 	left: 0;
 	bottom: 0;
+	opacity: 0;
 }
 .first-page .photo-frame-right {
 	width: 19.7333333vw;
@@ -299,6 +300,7 @@ html {
 	position: absolute;
 	right: 0;
 	top: 0;
+	opacity: 0;
 }
 .first-page .bottom-ear {
 	width: 82.9333333vw;
@@ -306,12 +308,14 @@ html {
 	position: absolute;
 	right: 0;
 	bottom: 0;
+	opacity: 0;
 }
 .first-page .logo {
 	display: block;
 	width: 27.2vw;
 	height: 16vw;
 	margin: 50px auto 0;
+	opacity: 0;
 }
 .first-page .title {
 	font-size: 20px;
@@ -319,6 +323,7 @@ html {
 	font-weight: 500;
 	margin: 29px auto 0;
 	text-align: center;
+	opacity: 0;
 }
 .first-page .rect-box {
 	width: 48.8vw;
@@ -329,6 +334,7 @@ html {
 }
 .first-page .rect-box .rect-box-bg {
 	background-image: url("../assets/rect.png");
+	opacity: 0;
 }
 .first-page .rect-box .rect-box-bg .china-merchants {
 	width: 1.86666667vw;
@@ -344,6 +350,7 @@ html {
 	position: absolute;
 	top: 31px;
 	left: 39px;
+	opacity: 0;
 }
 .first-page .rect-box .title-2 {
 	width: 12vw;
@@ -351,6 +358,7 @@ html {
 	position: absolute;
 	top: 31px;
 	right: 35px;
+	opacity: 0;
 }
 .first-page .rect-box .double-slash {
 	width: 14.66666667vw;
@@ -371,6 +379,7 @@ html {
 	height: 25.33333333vw;
 	position: absolute;
 	left: -28px;
+	opacity: 0;
 }
 .first-page .rect-box .bubble {
 	border-radius: 50%;
