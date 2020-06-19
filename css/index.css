@@ -20,7 +20,7 @@ html {
 	width: 100%;
 	height: 100%;
     border-radius: 15px;
-    background-image: url('/assets/music.svg');
+    background-image: url('./assets/music.svg');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -68,10 +68,10 @@ html {
 	z-index: 1;
 }
 .title-box .title-box-bg {
-	background-image: url("/assets/title-box.png");
+	background-image: url("./assets/title-box.png");
 }
 .title-box.-white .title-box-bg {
-	background-image: url("/assets/title-box-white.png");
+	background-image: url("./assets/title-box-white.png");
 }
 .title-box .serial-number {
 	font-size: 1.5625rem;
@@ -319,7 +319,7 @@ html {
 	z-index: 1;
 }
 .first-page .rect-box .rect-box-bg {
-	background-image: url("/assets/rect.png");
+	background-image: url("./assets/rect.png");
 }
 .first-page .rect-box .rect-box-bg .china-merchants {
 	width: 1.86666667vw;
@@ -486,7 +486,7 @@ html {
 	position: relative;
 }
 .third-page .map-box .map-box-bg {
-	background-image: url("/assets/map.png");
+	background-image: url("./assets/map.png");
 }
 .third-page .map-box .callout {
 	width: 5.86666666667vw;
@@ -495,7 +495,7 @@ html {
 	z-index: 1;
 }
 .third-page .map-box .callout .callout-bg {
-	background-image: url("/assets/callout.png");
+	background-image: url("./assets/callout.png");
 	opacity: 0;
 	animation-timing-function: ease-in-out;
 	animation-duration: .4s;
@@ -597,7 +597,7 @@ html {
 }
 /* fourth page */
 .fourth-page .background {
-	background-image: url("/assets/pro-bg.jpg");
+	background-image: url("./assets/pro-bg.jpg");
 }
 .fourth-page .background::before {
 	background: rgba(255,255,255,0.78);
@@ -657,20 +657,20 @@ html {
 	background: rgba(0,0,0,0.3);
 }
 .fourth-page .product-box .product-item .product-1 {
-	background-image: url("/assets/pro1.png");
+	background-image: url("./assets/pro1.png");
 }
 .fourth-page .product-box .product-item .product-2 {
-	background-image: url("/assets/pro2.png");
+	background-image: url("./assets/pro2.png");
 }
 .fourth-page .product-box .product-item .product-3 {
-	background-image: url("/assets/pro3.png");
+	background-image: url("./assets/pro3.png");
 }
 .fourth-page .product-box .product-item .product-4 {
-	background-image: url("/assets/pro4.png");
+	background-image: url("./assets/pro4.png");
 }
 /* fifth page */
 .fifth-page .background {
-	background-image: url("/assets/pro-bg.jpg");
+	background-image: url("./assets/pro-bg.jpg");
 }
 .fifth-page .background::before {
 	background: rgba(255,255,255,0.88);
@@ -712,7 +712,7 @@ html {
 }
 /* sixth page */
 .sixth-page .background {
-	background-image: url("/assets/contact-bg.jpg");
+	background-image: url("./assets/contact-bg.jpg");
 }
 .sixth-page .white-logo {
 	width: 26.1333333333vw;
@@ -764,7 +764,7 @@ html {
 }
 /* seventh page */
 .seventh-page .background {
-	background-image: url("/assets/submit-bg.jpg");
+	background-image: url("./assets/submit-bg.jpg");
 	animation: bgScroll2 6s linear both alternate infinite;
 }
 .seventh-page .title {
