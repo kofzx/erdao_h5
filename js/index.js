@@ -2,6 +2,7 @@ $(document).ready(function() {
 
 	var animCls = ".-anim";
 
+	var isLoaded = false;
 	// 资源加载器
 	var resources = [
 		'./assets/bottom-ear.png',
@@ -47,6 +48,7 @@ $(document).ready(function() {
 	          // 全部加载完成
 	          $("#loading").hide();
 	          initFullPage();
+	          isLoaded = true;
 	       }
 	    }
 	 }
@@ -185,8 +187,10 @@ $(document).ready(function() {
 	})
 
 	function playAudio() {
-		audio.play();
-		audioController.style.animationPlayState = "running";
+		if (isLoaded) {
+			audio.play();
+			audioController.style.animationPlayState = "running";
+		}
 	}
 
 	function pauseAudio() {
