@@ -633,18 +633,10 @@ html {
 }
 @keyframes bgScroll {
 	0% {
-		background-position-x: 0px;
+		background-position-x: left;
 	}
 	100% {
-		background-position-x: -4.25rem;
-	}
-}
-@keyframes bgScroll2 {
-	0% {
-		background-position-x: 0px;
-	}
-	100% {
-		background-position-x: -7.25rem;
+		background-position-x: right;
 	}
 }
 .fourth-page .product-box {
@@ -794,7 +786,6 @@ html {
 /* seventh page */
 .seventh-page .background {
 	background-image: url("../assets/submit-bg.jpg");
-	animation: bgScroll2 6s linear both alternate infinite;
 }
 .seventh-page .title {
 	text-align: center;
