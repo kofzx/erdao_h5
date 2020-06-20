@@ -6,6 +6,9 @@ html {
 	html {
 		font-size: 14px;
 	}
+	.xs-hidden {
+		display: none !important;
+	}
 }
 /* music */
 .bgm-btn-wraper {
@@ -416,19 +419,20 @@ html {
 .second-page .main-wrapper {
 	margin-top: 2px;
 	display: flex;
+	justify-content: center;
 }
 .second-page .main-wrapper .timeline-box {
 	width: 15px;
-	height: 35em;
+	/*height: 35em;*/
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-left: 26px;
+	/*margin-left: 26px;*/
 	opacity: 0;
 }
 .second-page .main-wrapper .timeline-box .diamond {
-	width: 15px;
-	height: 15px;
+	width: 10px;
+	height: 10px;
 	border: 2px solid rgba(210,163,105,1);
 	transform: rotate(45deg);
 	position: relative;
@@ -441,7 +445,7 @@ html {
 .second-page .main-wrapper .milestone-box {
 	width: 81.33333333vw;
 	margin-left: 20px;
-	padding-top: 7px;
+	padding: 7px 0 14px 0;
 }
 .second-page .main-wrapper .milestone-box .milestone {
 	height: 19.73333333vw;
@@ -585,6 +589,11 @@ html {
 	padding: 0 18px 0 14px;
 	display: flex;
 	height: 64vw;
+}
+@media (max-width: 360px) {
+	.third-page .description-box {
+		margin-top: 50px;
+	}
 }
 .third-page .description-box .person-img {
 	width: 19.4666666667vw;
