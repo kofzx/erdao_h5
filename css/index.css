@@ -2,12 +2,10 @@ html {
 	font-size: 16px;
 }
 /* iphone 5 fix */
-@media (max-width: 360px) {
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
 	html {
 		font-size: 14px;
 	}
-}
-@media (min-width: 320px) and (max-width: 360px) {
 	.xs-hidden {
 		display: none !important;
 	}
@@ -592,7 +590,7 @@ html {
 	display: flex;
 	height: 64vw;
 }
-@media (max-width: 360px) {
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
 	.third-page .description-box {
 		margin-top: 50px;
 	}
